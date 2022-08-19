@@ -50,7 +50,12 @@ function Sort() {
                 <FormControl sx={{ minWidth: 180 }} size="small">
                     <InputLabel>Tag</InputLabel>
                     <Select label="Tag" onChange={(e) => _handleChange(e, "tag")} value={searchTag}>
-                        {tags && tags.map((tag) => <MenuItem value={tag.attributes.tag}>{tag.attributes.tag}</MenuItem>)}
+                        {tags &&
+                            tags.map((tag) => (
+                                <MenuItem key={`${tag.attributes.tag}keytag`} value={tag.attributes.tag}>
+                                    {tag.attributes.tag}
+                                </MenuItem>
+                            ))}
                     </Select>
                 </FormControl>
 

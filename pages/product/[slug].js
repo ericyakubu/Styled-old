@@ -61,7 +61,7 @@ export default function ProductDetails() {
                     <h3 id="productTitle">{title}</h3>
                     <p id="productDescription">{description}</p>
                     <Stack direction="row" spacing={1}>
-                        {tags && tags.data.map((tag) => <Chip label={tag.attributes.tag} sx={{ fontSize: 16, fontWeight: 500 }} onClick={setSearchTag(tag.attributes.tag)} />)}
+                        {tags && tags.data.map((tag) => <Chip label={tag.attributes.tag} key={`${tag.attributes.tag}keytag`} sx={{ fontSize: 16, fontWeight: 500 }} onClick={setSearchTag(tag.attributes.tag)} />)}
                     </Stack>
                 </div>
 
