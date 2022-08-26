@@ -22,7 +22,6 @@ export default function ProductDetails() {
     // get slug from url
     const { query } = useRouter();
     const route = useRouter();
-    console.log(route);
 
     // Fetch GRAPHQL data
     const [results] = useQuery({
