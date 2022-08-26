@@ -22,6 +22,7 @@ export default function ProductDetails() {
     // get slug from url
     const { query } = useRouter();
     const route = useRouter();
+    console.log(route);
 
     // Fetch GRAPHQL data
     const [results] = useQuery({
@@ -42,8 +43,6 @@ export default function ProductDetails() {
         //success just adds a nice green mark next to it
         // duration, obviously, specipifies for how long the 'toast' should be there (im milliseconds (1500 = 1.5seconds))
     };
-
-    console.log(tags.data);
 
     return (
         <DetailsStyled>
