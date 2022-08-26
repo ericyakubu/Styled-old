@@ -106,32 +106,6 @@ export default function Home() {
             <main>
                 <div>
                     <Sort />
-                    {/* <Selectors>
-                        <SelectorsInner>
-                            <Input placeholder="Name" sx={{ width: 220 }} value={searchTitle} onChange={(e) => _handleChange(e, "name")} />
-
-                            <FormControl sx={{ minWidth: 180 }} size="small">
-                                <InputLabel>Alphabetically</InputLabel>
-                                <Select label="Alphabetically" onChange={(e) => _handleChange(e, "alph")} value={sortAlph}>
-                                    <MenuItem value={`desc`}>A-Z</MenuItem>
-                                    <MenuItem value={`asc`}>Z-A</MenuItem>
-                                </Select>
-                            </FormControl>
-
-                            <FormControl sx={{ minWidth: 180 }} size="small">
-                                <InputLabel>Tag</InputLabel>
-                                <Select label="Tag" onChange={(e) => _handleChange(e, "tag")} value={searchTag}>
-                                    {tags && tags.map((tag) => <MenuItem value={tag.attributes.tag}>{tag.attributes.tag}</MenuItem>)}
-                                </Select>
-                            </FormControl>
-
-                            <div id="priceSelectors">
-                                <h3>Price</h3>
-                                <Input placeholder="Min Price" sx={{ maxWidth: 120 }} value={searchMinPrice} onChange={(e) => _handleChange(e, "minPrice")} />
-                                <Input placeholder="Max Price" sx={{ maxWidth: 120 }} value={searchMinPrice} onChange={(e) => _handleChange(e, "maxPrice")} />
-                            </div>
-                        </SelectorsInner>
-                    </Selectors> */}
 
                     <GalleryStyled>{products && products.map((product) => <Product product={product.attributes} key={product.attributes.slug} />)}</GalleryStyled>
                 </div>

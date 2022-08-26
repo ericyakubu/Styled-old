@@ -21,6 +21,7 @@ export default function ProductDetails() {
 
     // get slug from url
     const { query } = useRouter();
+    const route = useRouter();
 
     // Fetch GRAPHQL data
     const [results] = useQuery({
@@ -50,7 +51,14 @@ export default function ProductDetails() {
                 <div className="slide">
                     {image.data.map((img) => (
                         <>
-                            <img key={img.attributes.formats.large.url} src={img.attributes.formats.large.url} onClick={() => setMainImg(img.attributes.formats.large.url)} />
+                            <img
+                                key={img.attributes.formats.large.url}
+                                src={img.attributes.formats.large.url}
+                                onClick={() => {
+                                    setMainImg(img.attributes.formats.large.url);
+                                    route.push("/");
+                                }}
+                            />
                         </>
                     ))}
                 </div>
