@@ -9,11 +9,11 @@ function Product({ product }) {
             <ProductStyled>
                 <Link href={`product/${product.slug}`}>
                     <div>
-                        <img src={product.image.data[0].attributes.formats.large.url} alt="" />
+                        <img src={product.image.data[0].attributes.formats.large.url} alt={product.title} />
                     </div>
                 </Link>
                 <h2>{product.title}</h2>
-                <h3>{product.price}</h3>
+                <h3>$ {product.price}</h3>
             </ProductStyled>
         </>
     );

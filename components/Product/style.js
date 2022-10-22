@@ -15,6 +15,8 @@ export const ProductStyled = styled.div`
     img {
         width: 100%;
         border-radius: 0.25rem;
+        object-fit: cover;
+        height: 27.5rem;
     }
 
     h2 {
@@ -25,5 +27,11 @@ export const ProductStyled = styled.div`
     h3 {
         font-weight: 700;
         font-size: 1.25rem;
+    }
+
+    @media (max-width: 425px) {
+        img {
+            height: 15rem;
+        }
     }
 `;

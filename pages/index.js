@@ -58,39 +58,13 @@ export default function Home() {
     if (error) return <p>Oh no... {error.message}</p>;
     const products = data.products.data;
 
+    console.log(products);
+
     // const products = null;
 
     const { pageCount, pageSize, total } = data.products.meta.pagination;
     setTags(data.tags.data);
     setPagesCount(pageCount);
-
-    const _handleChange = (e, variation) => {
-        switch (variation) {
-            case "alph":
-                setSortAlph(e.target.value);
-                console.log(e.target.value);
-                break;
-            case "tag":
-                setSearchTag(e.target.value);
-                console.log(e.target.value);
-                break;
-            case "name":
-                setSearchTitle(e.target.value);
-                console.log(e.target.value);
-                break;
-            case "minPrice":
-                setSearchMinPrice(e.target.value);
-                console.log(e.target.value);
-                break;
-            case "maxPrice":
-                setSearchMaxPrice(e.target.value);
-                console.log(e.target.value);
-                break;
-
-            default:
-                break;
-        }
-    };
 
     return (
         <>
@@ -105,7 +79,7 @@ export default function Home() {
 
             <main>
                 <div>
-                    <Sort />
+                    {/* <Sort /> */}
 
                     <GalleryStyled>{products && products.map((product) => <Product product={product.attributes} key={product.attributes.slug} />)}</GalleryStyled>
                 </div>

@@ -71,8 +71,8 @@ function Sort() {
 
                 <div id="priceSelectors">
                     <h3>Price</h3>
-                    <Input placeholder="Min Price" type="number" sx={{ maxWidth: 120 }} value={searchMinPrice} onChange={(e) => _handleChange(e, "minPrice")} />
-                    <Input placeholder="Max Price" type="number" sx={{ maxWidth: 120 }} value={searchMaxPrice} onChange={(e) => _handleChange(e, "maxPrice")} />
+                    <Input placeholder="Min" type="number" sx={{ maxWidth: 120 }} value={searchMinPrice} onChange={(e) => _handleChange(e, "minPrice")} />
+                    <Input placeholder="Max" type="number" sx={{ maxWidth: 120 }} value={searchMaxPrice} onChange={(e) => _handleChange(e, "maxPrice")} />
                 </div>
             </SelectorsInner>
         </Selectors>

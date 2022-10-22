@@ -13,6 +13,8 @@ export const SelectorsInner = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     width: 100%;
 
     #priceSelectors {
@@ -21,5 +23,11 @@ export const SelectorsInner = styled.div`
         justify-content: space-between;
 
         width: 30%;
+        gap: 0.2rem;
+
+        @media (max-width: 425px) {
+            width: 45%;
+            gap: 0.5rem;
+        }
     }
 `;
