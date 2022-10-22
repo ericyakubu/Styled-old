@@ -58,8 +58,6 @@ export default function Home() {
     if (error) return <p>Oh no... {error.message}</p>;
     const products = data.products.data;
 
-    console.log(products);
-
     // const products = null;
 
     const { pageCount, pageSize, total } = data.products.meta.pagination;
