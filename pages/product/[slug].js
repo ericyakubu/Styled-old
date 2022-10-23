@@ -40,8 +40,7 @@ export default function ProductDetails() {
     if (fetching) return <p>Loading...</p>;
     if (error) return <p>Oh no... {error.message}</p>;
 
-    const { title, description, image, tags, sizes } = data.products.data[0].attributes;
-
+    const { title, description, image, tags, sizes, price } = data.products.data[0].attributes;
     let checkSizes = [];
     sizes.data.map((size) => checkSizes.push(size.attributes.size));
     let availableSizes = [];
@@ -93,6 +92,9 @@ export default function ProductDetails() {
                     <div className="top">
                         <h3 id="productTitle">{title}</h3>
                         <p id="productDescription">{description}</p>
+                        <h3 id="productPrice">
+                            $<span>{price.toFixed(2)}</span>
+                        </h3>
                         <div id="productSizes_container">
                             <h3>Sizes</h3>
                             <div id="productSizes">

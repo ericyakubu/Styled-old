@@ -198,6 +198,17 @@ export const DetailsStyled = styled.div`
             }
         }
 
+        #productPrice {
+            display: flex;
+            align-items: center;
+            margin: 0 0 0.5rem 0;
+
+            span {
+                font-size: 1.75rem;
+                margin: 0 0 0 0.5rem;
+            }
+        }
+
         @media (max-width: 1024px) {
             width: 49.25%;
             height: 100%;

@@ -53,7 +53,7 @@ export default function Cart() {
                                         Size:<span>{cartItem.selected_size}</span>
                                     </h3>
                                     <h3>
-                                        $<span>{cartItem.price}</span>
+                                        $<span>{cartItem.price.toFixed(2)}</span>
                                     </h3>
                                     <Quantity>
                                         <span>Quantity</span>

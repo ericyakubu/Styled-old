@@ -13,7 +13,7 @@ function Product({ product }) {
                     </div>
                 </Link>
                 <h2>{product.title}</h2>
-                <h3>$ {product.price}</h3>
+                <h3>$ {product.price.toFixed(2)}</h3>
             </ProductStyled>
         </>
     );
