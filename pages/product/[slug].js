@@ -150,7 +150,6 @@ export default function ProductDetails() {
                         <button
                             id="buy_btn"
                             onClick={() => {
-                                console.log(selectedSize);
                                 if (selectedSize) {
                                     onAdd(data.products.data[0].attributes, qty, selectedSize);
                                     notify();
