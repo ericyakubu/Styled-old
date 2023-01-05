@@ -52,9 +52,9 @@ export default function ProductDetails() {
         //success just adds a nice green mark next to it
         // duration, obviously, specipifies for how long the 'toast' should be there (im milliseconds (1500 = 1.5seconds))
     };
-    const notify_size = () => {
-        toast.error(`Please select a size for your ${title}`);
-    };
+    // const notify_size = () => {
+    //     toast.error(`Please select a size for your ${title}`);
+    // };
 
     const selectSize = (e) => {
         if (e.target.classList.contains("active")) {
@@ -95,7 +95,7 @@ export default function ProductDetails() {
                         <h3 id="productPrice">
                             $<span>{price.toFixed(2)}</span>
                         </h3>
-                        <div id="productSizes_container">
+                        {/* <div id="productSizes_container">
                             <h3>Sizes</h3>
                             <div id="productSizes">
                                 {sizes &&
@@ -113,7 +113,7 @@ export default function ProductDetails() {
                                         </>
                                     ))}
                             </div>
-                        </div>
+                        </div> */}
                         <div id="productTags_container">
                             <h3>Tags</h3>
                             <Stack direction="row" spacing={1}>
@@ -150,12 +150,12 @@ export default function ProductDetails() {
                         <button
                             id="buy_btn"
                             onClick={() => {
-                                if (selectedSize) {
-                                    onAdd(data.products.data[0].attributes, qty, selectedSize);
-                                    notify();
-                                } else {
-                                    notify_size();
-                                }
+                                // if (selectedSize) {
+                                onAdd(data.products.data[0].attributes, qty, selectedSize);
+                                notify();
+                                // } else {
+                                //     notify_size();
+                                // }
                             }}
                         >
                             Add to cart
